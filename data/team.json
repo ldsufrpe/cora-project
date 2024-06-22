@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "name": "Antonio Murilo",
+        "role": "Research Diretor",
+        "photo": "assets/images/antonio.jpg",
+        "summary": "PhD, Neuroscience, Albert Einstein College of Medicine 2019",
+        "details": "Nachi received his BS and MS from the University of Notre Dame."
+    },
+    {
+        "id": "2",
+        "name": "Wilson Rosa",
+        "role": "Research Scientist",
+        "photo": "assets/images/wilson.jpg",
+        "summary": "PhD, Biomedical Engineering, MIT 2020",
+        "details": "Jane has a background in biomedical engineering and focuses on developing innovative approaches to understanding brain function using neural imaging techniques. Her current research interests include the application of machine learning to neuroimaging data. Jane enjoys hiking, painting, and volunteering in her community."
+    },
+    {
+        "id": "3",
+        "name": "Leon Silva",
+        "role": "Research Scientist",
+        "photo": "assets/images/leon.jpg",
+        "summary": "PhD, Computer Science, Stanford University 2021",
+        "details": "John is a graduate student specializing in artificial intelligence and its applications in neuroscience. His research focuses on the development of algorithms for analyzing neural data. John is passionate about technology, music, and playing soccer."
+    },
+
+     {
+        "id": "4",
+        "name": "Ivan René Roa González",
+        "role": "Research Scientist",
+        "photo": "assets/images/ivan.jpg",
+        "summary": "PhD, Physics, Stanford University 2021",
+        "details": "John is a graduate student specializing in artificial intelligence and its applications in neuroscience. His research focuses on the development of algorithms for analyzing neural data. John is passionate about technology, music, and playing soccer."
+    }
+]

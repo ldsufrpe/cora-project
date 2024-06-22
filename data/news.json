@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "title": "New Research Paper Published",
+        "subtitle": "Our latest research paper on geometric deep learning has been published.",
+        "date": "June 19, 2024",
+        "content": "Our latest research paper on geometric deep learning has been published in the Journal of AI Research. This paper explores..."
+    },
+    {
+        "id": "2",
+        "title": "CORA Project Receives Funding",
+        "subtitle": "The CORA project has received new funding from the National Science Foundation.",
+        "date": "May 30, 2024",
+        "content": "The CORA project has received new funding from the National Science Foundation to continue our groundbreaking work in geometric deep learning..."
+    }
+
+]

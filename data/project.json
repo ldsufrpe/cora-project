@@ -1,0 +1,23 @@
+{
+    "summary": "The Cora project proposes an innovative approach to solving complex problems by using debates between artificial intelligence agents (LLMs). This interactive environment allows LLMs to debate and refine their ideas, overcoming the limitations of individual approaches. By generating new perspectives on reasoning and decision-making, Cora promises significant advances in strategic planning and scientific problem-solving.",
+    "objectives": [
+        "Develop an interactive environment for debates between multiple LLM agents to solve complex problems.",
+        "Investigate debate and interaction strategies among LLMs, such as argumentation, negotiation, and cooperation.",
+        "Evaluate the effectiveness of the environment in solving complex problems compared to individual LLM approaches.",
+        "Explore the potential of the environment for applications in areas such as strategic planning, decision-making, and solution design."
+    ],
+    "methodology": [
+        "Selection of LLMs: Choose language models to participate in the debates.",
+        "Environment development: Create an interactive environment for the debates.",
+        "Definition of complex problems: Select problems that require reasoning, planning, and decision-making.",
+        "Implementation of debate strategies: Apply different debate strategies among LLMs.",
+        "Evaluation and analysis: Assess the effectiveness of the environment in solving complex problems."
+    ],
+    "applications": [
+        "Theorem proving in formal language: Integrate with tools like LeanDojo.",
+        "Theorem proving in natural language: Integrate with the NaturalProver system.",
+        "Analysis of financial asset price series: Integrate with Expert Advisors.",
+        "Development of multidisciplinary educational material: Create high-quality educational content."
+    ],
+    "alignment": "The Cora project is committed to the ethical development and use of AI, seeking solutions that respect human rights and diversity. Additionally, it contributes to the structuring of AI governance ecosystems, promoting best practices and codes of conduct."
+}

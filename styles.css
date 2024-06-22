@@ -1,0 +1,526 @@
+/* Paleta de cores */
+:root {
+    --primary-color: #003366;  /* Azul Escuro */
+    --secondary-color: #007bff;  /* Azul Bootstrap */
+    --background-color: #FFFFFF;  /* Branco */
+    --text-color: #666666;  /* Cinza Médio */
+    --header-background: #FFFFFF;  /* Branco para o fundo do header */
+    --footer-background: #003366;  /* Azul Escuro para o fundo do footer */
+    --link-color: #003366;  /* Azul Bootstrap para os links */
+    --link-hover-color: #0056b3;  /* Azul Bootstrap mais escuro para os links ao passar o mouse */
+    --github-color: #333333;  /* Cor do ícone do GitHub */
+    --github-hover-color: #24292e;  /* Cor do ícone do GitHub ao passar o mouse */
+  --title-slide:  #FFFFFF; /* cor do título dos slides*/
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-background);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+header.hidden {
+    top: -100px; /* Esconde o header fora da tela */
+}
+
+header:hover {
+    top: 0; /* Mostra o header quando o mouse está sobre ele */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.github-link {
+    position: relative;
+}
+
+.github-link a svg {
+    fill: var(--github-color);
+    transition: fill 0.3s;
+}
+
+.github-link a:hover svg {
+    fill: var(--github-hover-color);
+}
+
+.github-link .github-text {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    background-color: var(--github-hover-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.github-link a:hover .github-text {
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: var(--link-hover-color);
+}
+
+main {
+    padding: 80px 30px 30px; /* Adiciona espaço extra no topo para evitar sobreposição com o header fixo */
+}
+
+section {
+    margin: 20px 0;
+    padding: 25px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+#news-container, #publications-container, #code-container, #sponsors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item, .publication-item, .code-item, .sponsor-item {
+    background-color: var(--background-color); /* Cor de fundo mais suave */
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.news-item:hover, .publication-item:hover, .code-item:hover, .sponsor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+    color: #fff; /* Text color change on hover */
+}
+
+.news-item:hover h3, .news-item:hover p, .news-item:hover small,
+.publication-item:hover .publication-title, .publication-item:hover .publication-authors,
+.publication-item:hover .publication-journal, .code-item:hover h3,
+.code-item:hover p, .code-item:hover a, .sponsor-item:hover h3, .sponsor-item:hover p {
+    color: #fff; /* Ensure text turns white on hover */
+}
+
+.news-item:hover a, .publication-item:hover a, .code-item:hover a, .sponsor-item:hover a {
+    color: #fff; /* Link color change on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: var(--footer-background);
+    color: var(--header-background);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para a seção da equipe */
+#team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 100px; /* Limita a largura máxima das imagens */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+.team-member p {
+    color: var(--text-color);
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.team-member .details {
+    display: none;
+    font-size: 0.8em;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    transition: display 0.3s;
+}
+
+.team-member:hover .details {
+    display: block;
+}
+
+.team-member:hover .summary {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #team-container {
+        grid-template-columns: 1fr; /* 1 coluna para telas pequenas */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    #team-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas médias */
+    }
+}
+
+@media (min-width: 1201px) {
+    #team-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas para telas grandes */
+    }
+}
+
+/* Estilo para a seção de publicações */
+.publication-item {
+    background-color: var(--background-color); /* Cor de fundo mais suave */
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.publication-item:hover .publication-title, .publication-item:hover .publication-authors, .publication-item:hover .publication-journal {
+    color: #fff;
+}
+
+.publication-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.publication-authors, .publication-journal {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.publication-journal {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Estilos para a seção de notícias */
+#news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-item {
+    background-color: var(--background-color); /* Cor de fundo mais suave */
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.news-item:hover h3, .news-item:hover p, .news-item:hover small {
+    color: #fff;
+}
+
+.news-item h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+.news-item h3 a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.news-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.news-item p {
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+.news-item small {
+    display: block;
+    color: #999;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+/* Estilos para a seção de código */
+.code-item {
+    background-color: var(--background-color); /* Cor de fundo mais suave */
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.code-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.code-item:hover h3, .code-item:hover p, .code-item:hover small, .code-item:hover a {
+    color: #fff;
+}
+
+/* Estilos para a seção de patrocinadores */
+#sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.sponsor-item {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sponsor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sponsor-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sponsor-item h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+.sponsor-item p {
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+/* Estilos para o slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 300px; /* Ajuste a altura conforme necessário */
+    position: relative;
+    background: var(--background-color); /* Fundo colorido */
+    color: #fff;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/*.mySlides img {*/
+/*    width: 100%;*/
+/*    height: 300px;*/
+/*    border-radius: 10px; !* Mantém a borda arredondada *!*/
+/*}*/
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.text {
+    padding: 0px;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    color: var(--primary-color);
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: var(--secondary-color);
+}
+/* Estilos específicos para o título do slide */
+.slide-title {
+    text-align: left;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 2em;
+}
+
+
+/* Estilos para a seção de contato */
+#contact {
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 25px;
+    text-align: left;
+}
+
+#contact p {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+#contact a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}nav ul li a.contact-button {
+    color: #fff;
+    background-color: var(--secondary-color);
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.contact-button:hover {
+    background-color: var(--link-hover-color);
+}
+#contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Deep Learning for Geometry Processing",
+        "authors": "John Doe, Jane Smith",
+        "journal": "Journal of Computational Geometry",
+        "year": 2023,
+        "doi": "https://doi.org/10.1000/jcg.2023.123456"
+    },
+    {
+        "title": "Advanced Neural Networks",
+        "authors": "Alice Johnson, Robert Brown",
+        "journal": "Neural Processing Letters",
+        "year": 2022,
+        "doi": "https://doi.org/10.1000/npl.2022.654321"
+    },
+    {
+        "title": "Machine Learning Applications in Robotics",
+        "authors": "Emily Davis, Michael Wilson",
+        "journal": "Robotics and Automation Journal",
+        "year": 2021,
+        "doi": "https://doi.org/10.1000/raj.2021.987654"
+    },
+    {
+        "title": "Artificial Intelligence in Healthcare",
+        "authors": "William Martinez, Olivia Harris",
+        "journal": "Healthcare Informatics",
+        "year": 2020,
+        "doi": "https://doi.org/10.1000/hi.2020.321098"
+    },
+    {
+        "title": "Big Data Analytics",
+        "authors": "David Lee, Emma Moore",
+        "journal": "Data Science Journal",
+        "year": 2019,
+        "doi": "https://doi.org/10.1000/dsj.2019.654987"
+    }
+]

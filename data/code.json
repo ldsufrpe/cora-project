@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Algorithms Repository",
+        "description": "Source code of the algorithms developed by CORA.",
+        "link": "https://github.com/cora-project/algorithms"
+    },
+    {
+        "title": "User Interface",
+        "description": "Source code of the user interface for the CORA project.",
+        "link": "https://github.com/cora-project/ui"
+    }
+]

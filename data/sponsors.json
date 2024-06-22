@@ -1,0 +1,17 @@
+[
+    {
+        "name": "TechCorp",
+        "description": "A leading tech company providing cutting-edge solutions.",
+        "logo": "assets/images/techcorp.svg"
+    },
+    {
+        "name": "HealthPlus",
+        "description": "Innovative healthcare services and solutions.",
+        "logo": "assets/images/healthplus.svg"
+    },
+    {
+        "name": "EduTech",
+        "description": "Empowering education through technology.",
+        "logo": "assets/images/edutech.svg"
+    }
+]
